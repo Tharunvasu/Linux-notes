@@ -1,0 +1,117 @@
+
+    1  sudo apt update
+    2  sudo nano /etc/resolv.conf 
+    3  sudo apt update
+    4  sudo apt upgrade
+    5  sudo apt install gcc++
+    6  sudo apt install gcc
+    7  sudo apt install build-essentials
+    8  sudo apt install build-essential
+    9  sudo apt install gdb
+   10  init 0
+   11  gcc --version
+   12  cd "/home/rps/Desktop/C Demo/" && gcc first.c -o first && "/home/rps/Desktop/C Demo/"first
+   13  sudo su
+   14  tar xvfz node_exporter-1.7.0.linux-amd64.tar.gz 
+   15  cd node_exporter-1.7.0.linux-amd64/
+   16  sudo mv node_exporter /usr/local/bin/
+   17  sudo tee /etc/systemd/system/node_exporter.service<<EOF
+   18  [Unit]
+   19  Description=Node Exporter
+   20  After=network.target
+   21   
+   22  [Service]
+   23  User=rps
+   24  Group=rps
+   25  Type=simple
+   26  ExecStart=/usr/local/bin/node_exporter
+   27   
+   28  [Install]
+   29  WantedBy=multi-user.target
+   30  EOF
+   31  sudo systemctl daemon-reload
+   32  sudo systemctl start node_exporter
+   33  sudo systemctl enable node_exporter
+   34  sudo systemctl status node_exporter
+   35  sudo apt install gcc
+   36  sudo apt install git
+   37  sudo apt install make
+   38  sudo apt install vim
+   39  sudo apt install g++
+   40  sudo apt install gedit
+   41  sudo apt install cmake
+   42  sudo apt install g++
+   43  df -h
+   44  sudo apt update
+   45  sudo apt upgrade
+   46  sudo reboot
+   47  mkdir
+   48  'mkdir
+   49   
+   50  mkdir file
+   51  mkdir file1
+   52  ls
+   53  cat file.text
+   54  cat > file.text
+   55  ls
+   56  mkdir
+   57  mkdir file
+   58  cat > file.text
+   59  rm file
+   60  rmdir file
+   61  history
+   62  pwd
+   63  cd
+   64  rmdir
+   65  mkdir
+   66  mkdir file1
+   67  rmdir file1
+   68  ls
+   69  mv
+   70  touch file1 file2 file3
+   71  ls
+   72  cat
+   73  ls
+   74  cat > file1.txt
+   75  ls
+   76  pwd file1
+   77  file1
+   78  ps
+   79  rm file1
+   80  ls
+   81  undo file1
+   82  rm file1.txt
+   83  ls
+   84  cat > file1.text
+   85  ls
+   86  mv file1
+   87  history
+   88  cat file
+   89  cat > file.txt
+   90  cat file
+   91  vi file8
+   92  cat file
+   93  rm file8
+   94  rm file3
+   95  cd .
+   96  cd . file.txt
+   97  vi file8
+   98  file 9
+   99  touch file9
+  100  cp file8 file9
+  101  cat file9
+  102  cat file8
+  103  rm file9
+  104  cat file9
+  105  cat file8
+  106  cat file1
+  107  cat file1.txt
+  108  cat file1.text
+  109  history
+  110  pwd
+  111  cat linux.txt
+  112  cat file1.text
+  113  history command
+  114  . file1.text
+  115  touch file.txt
+  116  history >> file.txt
