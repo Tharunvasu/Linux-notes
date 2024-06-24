@@ -1,0 +1,100 @@
+1).Write a C program to reverse a given string without using any additional library functions.
+
+#include <stdio.h>  
+#include <string.h> 
+int main()  
+{  
+    char str[20];   
+    printf(" \n Enter a string to be reversed: ");  
+    scanf ("%s", str);  
+       
+    printf(" \n After the reverse of a string: %s ", strrev(str));  
+    return 0;  
+}  
+
+
+
+2).Implement a function in C that takes an integer array and its size as arguments and sorts the elements of the array in ascending order using a selection sort algorithm.
+
+#include <stdio.h>    
+     
+int main()    
+{       
+    int arr[] = {5, 2, 8, 7, 1};     
+    int temp = 0;           
+    int length = sizeof(arr)/sizeof(arr[0]);    
+    printf("Elements of original array: \n");    
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr[i]);     
+    }      
+           
+    for (int i = 0; i < length; i++) {     
+        for (int j = i+1; j < length; j++) {     
+           if(arr[i] > arr[j]) {    
+               temp = arr[i];    
+               arr[i] = arr[j];    
+               arr[j] = temp;    
+           }     
+        }     
+    }    
+        
+    printf("\n");        
+    printf("Elements of array sorted in ascending order: \n");    
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr[i]);    
+    }    
+    return 0;    
+}     
+
+
+3).Explain the concept of structures in C and write a program to store student information (name, roll number, marks) using a structure.
+
+#include<stdio.h>  
+void main ()  
+{  
+  char names[2][10],mummy;  
+  int roll_numbers[2],i;  
+  float marks[2];  
+  for (i=0;i<3;i++)  
+  {  
+      
+   printf("Enter the name, roll number, and marks of the student %d",i+1);  
+    scanf("%s %d %f",&names[i],&roll_numbers[i],&marks[i]);  
+    scanf("%c",&mummy); 
+  }  
+  printf("Printing the Student details ...\n");  
+  for (i=0;i<3;i++)  
+  {  
+    printf("%s %d %f\n",names[i],roll_numbers[i],marks[i]);  
+  }  
+}
+
+5).Explain the concept of pointers in C and write a program to swap the values of two variables using pointers.
+
+#include <stdio.h>
+int main() {
+    int a, b, temp;
+    int *ptr1, *ptr2;
+    printf("Enter the value of a and b: ");
+    scanf("%d %d", &a, &b);
+    printf("\nBefore swapping a = %d and b = %d", a, b);
+  
+    ptr1 = &a;
+    ptr2 = &b;
+    temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+    printf("\n After swapping a = %d and b = %d", a, b);
+    return 0;
+
+4).Differentiate between single-linked lists and doubly-linked lists in C. Write code snippets to create a node and perform a basic
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* prev;
+    struct Node* next;
+};
+
